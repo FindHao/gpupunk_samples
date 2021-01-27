@@ -1,0 +1,3 @@
+vectorAdd.f32.uvm/vectorAdd
+*/*.fatbin
+*.o
