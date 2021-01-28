@@ -55,7 +55,6 @@ int main(void)
     checkCudaErrors(cudaMallocManaged(&C, numElements * sizeof(float)));
 
     A[0] = 0.123456789;
-    printf("==========%p", &A[0]);
     B[0] = 0.1;
 
     // Launch the Vector Add CUDA Kernel
@@ -65,7 +64,7 @@ int main(void)
     vectorAdd<<<blocksPerGrid, threadsPerBlock>>>(A, B, C, numElements);
     cudaDeviceSynchronize();
 
-    printf("%f", C[0]);
+    printf("%f\n", C[0]);
     if (abs(C[0] - 0.2234567) < 1e-6)
         printf("Test PASSED\n");
     else{

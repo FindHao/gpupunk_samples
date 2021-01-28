@@ -35,7 +35,7 @@
 
 # Location of the CUDA Toolkit
 CUDA_PATH ?= /usr/local/cuda
-CUDA_EXAMPLE_PATH ?= /usr/local/cuda/samples/
+CUDA_EXAMPLE_PATH ?= /usr/local/cuda/samples
 
 ##############################
 # start deprecated interface #
@@ -243,7 +243,7 @@ ALL_LDFLAGS += $(addprefix -Xlinker ,$(LDFLAGS))
 ALL_LDFLAGS += $(addprefix -Xlinker ,$(EXTRA_LDFLAGS))
 
 # Common includes and paths for CUDA
-INCLUDES  := -I/usr/local/cuda/samples/common/inc
+INCLUDES  := -I${CUDA_EXAMPLE_PATH}/common/inc
 LIBRARIES :=
 
 ################################################################################
