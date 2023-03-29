@@ -306,9 +306,9 @@ endif
 
 # Gencode arguments
 ifeq ($(TARGET_ARCH),$(filter $(TARGET_ARCH),armv7l aarch64))
-SMS ?= 53 61 62 70 72 75 80 86 87
+SMS ?= 70 72 75 80 86 87
 else
-SMS ?= 61 70 75 80 86
+SMS ?= 70 75 80 86
 endif
 
 ifeq ($(SMS),)
